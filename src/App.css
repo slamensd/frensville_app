@@ -1,0 +1,277 @@
+/* Global Styles */
+body {
+  font-family: 'Bjola', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0f7b87; /* Background color */
+  color: #ffffff; /* Text color */
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+/* Header Styles */
+.header {
+  background: #15818d; /* Header background color */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  height: 30px;
+}
+
+.header-coin-balance {
+  display: flex;
+  align-items: center;
+
+}
+
+.header-coin-icon {
+  width: 30px;
+  margin-right: 5px;
+}
+
+/* Top Navigation Bar styles */
+.top-nav-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+  background: #15818d; /* Color for the top nav bar */
+  position: relative; /* For absolute positioning of the search bar */
+}
+
+.top-nav-button {
+  border: 2px solid #ffffff; /* White border */
+  border-radius: 15px; /* Rounded corners */
+  padding: 5px 15px;
+  color: #ffffff; /* White text */
+  background-color: transparent; /* Transparent background */
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.top-nav-button:hover {
+  background-color: #ffffff; /* Color change on hover */
+  color: #15818d; /* Text color change on hover */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Search bar animation styles */
+.search-bar {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  width: 0;
+  padding: 5px 15px;
+  transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: 50px; /* Adjust based on your layout */
+  top: 50%; /* Center vertically within the top nav bar */
+  transform: translateY(-50%);
+}
+
+.search-bar.active {
+  width: calc(100% - 100px); /* Full width minus the space for the search icon */
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  z-index: 2; /* Ensure the search icon is above the expanding search bar */
+}
+
+/* Bottom Navigation Bar styles */
+.bottom-nav-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #1ba9b9; /* Lighter color for the bottom nav bar */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.center-button {
+  background-color: #4ade80; /* Green background */
+  border: 5px solid #ffffff; /* Add a border to lift the button off the nav */
+  border-radius: 50%; /* Circle */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  color: white;
+  font-size: 24px; /* Icon size */
+  padding: 30px;
+  position: absolute;
+  bottom: 20px; /* Lift above the bottom nav bar */
+  left: 10%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+/* Style adjustments for the 'Just added!' section */
+.book-showcase {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px; /* Space for the top nav bar */
+}
+
+.book-image {
+  width: 80%; /* Adjust as needed for your design */
+  margin: 0 auto; /* Center the image */
+}
+
+/* Style for the main content */
+.main-content {
+  padding: 20px;
+}
+
+/* Style for icons in the bottom navigation bar */
+.bottom-nav-bar i {
+  font-size: 24px; /* Adjust the size as needed */
+  color: white;
+}
+
+/* Styles for the hover effect on buttons */
+.top-nav-button:not(.search-button):hover,
+.bottom-nav-bar i:hover {
+  color: #4ade80; /* Change color on hover */
+  transform: scale(1.1); /* Slight increase in size on hover */
+  transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+}
+
+/* ... other styles ... */
+
+/* Rounded corners for the book content box */
+.book-showcase {
+  border-radius: 20px; /* Adjust as needed */
+  overflow: hidden; /* Ensures the content doesn't spill out of the border-radius */
+  /* ... other styles ... */
+}
+
+
+/* Styles for pagination dots */
+.pagination-dots {
+  display: flex;
+  justify-content: center;
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+}
+
+.pagination-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%; /* Circle shape */
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination-dot.active {
+  background-color: #4ade80; /* Active dot color */
+}
+
+/* ... other styles ... */
+
+/* Styles for the carousel */
+.book-showcase {
+  /* ... existing styles ... */
+  margin-bottom: 20px; /* Add some space at the bottom */
+}
+
+/* Style for each slide */
+.slide {
+  text-align: center; /* Center the content */
+  padding: 10px; /* Add some padding */
+}
+
+/* Style for images in the slides */
+.slide img {
+  max-width: 100%; /* Ensure images don't exceed the container width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 20px; /* Rounded corners as per your requirement */
+}
+
+/* ... other styles ... */
+
+/* Bottom Navigation Bar styles */
+.bottom-nav-bar {
+  /* ... existing styles ... */
+  height: 60px; /* Increased height for the bottom nav bar */
+  padding-top: 10px;
+}
+
+.center-button {
+  /* Adjust for square shape with rounded corners */
+  width: 50px; /* Square dimensions */
+  height: 50px;
+  border-radius: 10px; /* Rounded corners */
+  /* Ensure the button aligns with the bottom navigation bar */
+  position: relative;
+  top: -25px; /* Adjust as necessary */
+  /* ... other styles ... */
+}
+
+/* Styles for pagination dots */
+.pagination-dots {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 10px 0;
+}
+
+.pagination-dot {
+  width: 13px; /* Increased size */
+  height: 13px; /* Increased size */
+  background-color: transparent;
+  border: 1px solid #ffffff; /* White border */
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.pagination-dot.active {
+  background-color: #ffffff; /* Filled with white when active */
+}
+
+/* ... other styles ... */
+
+/* Adjust the bottom navigation bar's height and center the content vertically */
+.bottom-nav-bar {
+  /* ... existing styles ... */
+  height: 70px; /* Adjust as needed to fit the central button */
+  padding: 10px 0;
+  align-items: center; /* Center items vertically */
+}
+
+/* Style for the icons on the left and right of the SCAN button */
+.nav-icon {
+  flex: 1; /* Distribute space evenly */
+  text-align: center; /* Center the icons */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+/* Adjust the central SCAN button to be a square with rounded corners */
+.center-button {
+  flex: 0 0 70px; /* Do not grow or shrink, set a fixed width */
+  height: 50px; /* Height of the button */
+  border-radius: 15px; /* Rounded corners */
+  margin: 0 20px; /* Add some space on the left and right */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  background-color: #4ade80; /* Background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  /* ... other styles ... */
+}
